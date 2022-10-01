@@ -1,0 +1,9 @@
+The list component is basically used to map the values present inside the items, which is passed as props to the list component. In list component we created two hooks 
+firstly, usestate hook for storing the index value and updating it.
+second, useeffect hook for resetting the value of selectedindex whenever the items has been updated.
+We will be using a function called handleclick for updating the selectedindex value whenever the handle click function is called using clickhandler function.
+Now we will be using a child component within the list component to do the main functinality of the webpage that is changing the colour of the item when it is clicked. It takes four arguments 
+i.e, onclickhandler used to handle the javascript onclick function, index for index value, text which has to be displayed,isselected bool type for checking which index is selected by the user. 
+
+ 
+

@@ -1,0 +1,15 @@
+1. In onclick function inside the WrappedSingleList component we should create a function and pass onclickhandler function
+    onClick={()=>onClickHandler(index)}
+2. For usestate first we should give current state and after that we should pass the function that is used to update the state
+    const [selectedIndex, setSelectedIndex] = useState();
+3. Inside map function we should define key for each item for uniquely identifying the each item.
+    key={index}
+4. For isselected prop of SingleListItem we should compare the value of selectedindex and index gor identifying the item selected.
+    isSelected={selectedIndex===index}
+5. Inside WrappedListComponent.propTypes it should be arrayOf not array and it should be shape not shapeof, these both are syntax errors
+   and also in shape validation of index is not provided its validation should also be updated in the code.
+    WrappedListComponent.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,index: PropTypes.number
+    })),
+    };
